@@ -1,0 +1,32 @@
+﻿@model SubatOdev2.Models.KullaniciModel
+
+<h2>Kullanıcı Giriş Formu</h2>
+
+@using (Html.BeginForm("Kaydet", "Home", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(m => m.Ad)
+        @Html.TextBoxFor(m => m.Ad, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Ad)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Email)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.Telefon)
+        @Html.TextBoxFor(m => m.Telefon, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Telefon)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.Sifre)
+        @Html.PasswordFor(m => m.Sifre, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Sifre)
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Gönder</button>
+}
